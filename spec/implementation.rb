@@ -12,6 +12,7 @@ class ImplementationConfig
     add_html_routes
 
     WatirSpec.always_use_server = mobile? || ie? || safari? || phantomjs? || remote?
+    WatirSpec.persistent_browser = false if ie?
   end
 
   private
@@ -123,8 +124,8 @@ class ImplementationConfig
       [:internet_explorer, {}]
     else
       capabilities = Selenium::WebDriver::Remote::Capabilities.internet_explorer
-      capabilities.version = "10"
-      capabilities.platform = "Windows 2012"
+      capabilities.version = "9"
+      capabilities.platform = "Windows 2008"
       [:remote, {:url => "http://#{ENV["SAUCE_LABS_USER"]}:#{ENV["SAUCE_ACCESS_KEY"]}@ondemand.saucelabs.com:80/wd/hub", :desired_capabilities => capabilities}]
     end
   end
