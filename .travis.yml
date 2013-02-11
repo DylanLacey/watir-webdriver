@@ -7,7 +7,6 @@ before_script:
   - support/travis.sh
 env:
   - WATIR_WEBDRIVER_BROWSER=internet_explorer PREFER_CSS=1 SAUCE_LABS_USER=dylanatsauce
-  - WATIR_WEBDRIVER_BROWSER=phantomjs
 global:
   - secure: "sXDg4SyBto5j6AXfNFmOsK/C9ky2ZJ1BZyo7GqDu/C1CGxFc1WyZ2Iqn6xCn\nA/+lJsNLyCd7rEAT6laJWy5q59GmX5sSIO3U+b79vzHTXHvJ7dBDu2QdOUJu\nsqo0mnISCQaL6j4QNS8WDQCse4U2DNl4Y/oh1ukA7Zqjt/ZFv/s="
 matrix:
